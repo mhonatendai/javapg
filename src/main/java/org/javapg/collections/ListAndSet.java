@@ -68,11 +68,11 @@ public class ListAndSet {
         listNewOne.add("hawk");
         listNewOne.add("robin");
         Object[] objectArray = listNewOne.toArray();
-        String[] stringArray = listNewOne.toArray(new String[0]);
+        String[] stringArray = listNewOne.toArray(new String[0]); //initial array size, if it does not match, a new array is created.
         System.out.println("Elements of stringArray");
         System.out.println(Arrays.asList(stringArray));
         listNewOne.clear();
         System.out.println(objectArray.length); // 2
-        System.out.println(stringArray.length); // prints 2 as well, arrays do not grow / shrink.
+        System.out.println(stringArray.length); // prints 2 as well, the created arrays are simply copies but not related to the original list.
     }
 }
