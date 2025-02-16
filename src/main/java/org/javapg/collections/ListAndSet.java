@@ -74,5 +74,12 @@ public class ListAndSet {
         listNewOne.clear();
         System.out.println(objectArray.length); // 2
         System.out.println(stringArray.length); // prints 2 as well, the created arrays are simply copies but not related to the original list.
+
+//        Queue and Deque
+        System.out.println();
+        System.out.println("DEALING with Queues");
+        Queue<Integer> firstQueue = new LinkedList<>();
+        System.out.println(firstQueue.add(25)); //throws exception when the queue is full eg ArrayBlockingQueue.
+        System.out.println(firstQueue.offer(30)); // returns false when the queue is full.
     }
 }
