@@ -1,10 +1,9 @@
 package org.javapg.collections;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiFunction;
 
-public class MapMerge {
+public class Collections {
 
     public String getLongerCourseName(Map.Entry<String, String> mapEntry, String givenValue) {
         BiFunction<String, String, String> mapper = (value1, value2) ->
