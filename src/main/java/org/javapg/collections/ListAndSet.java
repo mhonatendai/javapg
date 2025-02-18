@@ -1,6 +1,7 @@
 package org.javapg.collections;
 
 import java.util.*;
+import java.util.function.BiFunction;
 
 public class ListAndSet {
     public static void main(String[] args) {
@@ -81,5 +82,31 @@ public class ListAndSet {
         Queue<Integer> firstQueue = new LinkedList<>();
         System.out.println(firstQueue.add(25)); //throws exception when the queue is full eg ArrayBlockingQueue.
         System.out.println(firstQueue.offer(30)); // returns false when the queue is full.
+
+//        Map and Map Methods
+        Map<String, String> animalFoods = new HashMap<>();
+        animalFoods.put("cow","grass");
+        animalFoods.put("goat","leaf");
+        animalFoods.put("dog","meat");
+        System.out.println();
+        System.out.println("MAP AND MAP OPERATIONS");
+        System.out.println(animalFoods.keySet());
+        animalFoods.keySet().forEach(System.out::println);
+        animalFoods.values().forEach(System.out::println);
+        System.out.println(animalFoods);
+        animalFoods.replaceAll((k, v) -> k + v);
+        System.out.println(animalFoods);
+
+        System.out.println();
+        System.out.println("Merging Data in a Map");
+        BiFunction<String, String, String> mapper = (v1, v2) -> v1.length()> v2.length() ? v1: v2;
+        Map<String, String> courses = new HashMap<>();
+        courses.put("Tk","Operating Systems");
+        courses.put("Fn","Audit");
+        courses.put("Sk","Forensics");
+
+        String oS = courses.merge("Sk","Digital Forensics",mapper);
+        System.out.println(courses);
+
     }
 }
