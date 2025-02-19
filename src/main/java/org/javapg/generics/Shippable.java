@@ -5,6 +5,8 @@ package org.javapg.generics;
 //Type Safety -  Early, at compile time.
 //Code Reusability - You can write the Shippable interface and method once, and then reuse it for any type of object you want to ship
 //Clarity and Readability
+
+//But interfaces are still important though, for defining contracts and for polymorphism
 public interface Shippable<T> {
 
 void ship(T t);
