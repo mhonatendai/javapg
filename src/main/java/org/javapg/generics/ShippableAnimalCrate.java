@@ -8,7 +8,7 @@ class ShippableAnimalCrate implements Shippable<Animal> {
 /*
 An example of an unbounded wildcard in generics.
  */
-    public static void shipAnything(List<Object> list) {
+    public static void shipAnything(List<?> list) {
         for (Object x: list)
             System.out.println(x);
     }
