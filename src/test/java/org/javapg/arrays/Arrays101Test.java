@@ -42,4 +42,17 @@ class Arrays101Test {
 
         return outputStream.toString().trim();
     }
+
+    @Test
+    public void testCompareArrays() {
+        int[] arr1 = {1, 2, 3, 4, 5};
+        int[] arr2 = {1, 2, 3, 4, 5};
+        assertEquals(0, Arrays101.compareArrays(arr1, arr2));
+
+        int[] arr3 = {5, 4, 3, 2, 1};
+        assertTrue(Arrays101.compareArrays(arr1, arr3) < 0);
+
+        int[] arr4 = {1, 2, 3, 4, 6};
+        assertTrue(Arrays101.compareArrays(arr1, arr4) < 0);
+    }
 }
