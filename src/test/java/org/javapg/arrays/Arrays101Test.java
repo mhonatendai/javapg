@@ -54,5 +54,8 @@ class Arrays101Test {
 
         int[] arr4 = {1, 2, 3, 4, 6};
         assertTrue(Arrays101.compareArrays(arr1, arr4) < 0);
+
+        int[] arr6 = {1, 2, 3, 4, 4};
+        assertTrue(Arrays101.compareArrays(arr1, arr6) > 0);
     }
 }
