@@ -12,4 +12,10 @@ public class Arrays101 {
     public static int compareArrays(int[] arr1, int[] arr2) {
         return Arrays.compare(arr1, arr2);
     }
+
+    public static int compareArraysWithMismatch(int[] arr1, int[] arr2) {
+        return Arrays.mismatch(arr1, arr2);
+    }
+
+
 }
